@@ -1,0 +1,27 @@
+{
+  "name": "starwars-names-for-a-practice",
+  "version": "1.0.0",
+  "description": "Get random StarWars names",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SotaSuzuki/starwars-names-for-a-practice.git"
+  },
+  "keywords": [
+    "random",
+    "star",
+    "wars"
+  ],
+  "author": "SotaSuzuki <3.3sota.suzuki@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SotaSuzuki/starwars-names-for-a-practice/issues"
+  },
+  "homepage": "https://github.com/SotaSuzuki/starwars-names-for-a-practice#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  }
+}
