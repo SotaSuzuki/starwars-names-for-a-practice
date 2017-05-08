@@ -1,14 +1,16 @@
 {
   "name": "starwars-names-for-a-practice",
-  "version": "1.4.0-beta.0",
+  "version": "0.0.0-semantically-released",
   "description": "Get random StarWars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SotaSuzuki/starwars-names-for-a-practice.git"
+    "url": "https://github.com/SotaSuzuki/starwars-names-for-a-practice.git"
   },
   "keywords": [
     "random",
@@ -23,5 +25,15 @@
   "homepage": "https://github.com/SotaSuzuki/starwars-names-for-a-practice#readme",
   "dependencies": {
     "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "mocha": "3.3.0",
+    "semantic-release": "^6.3.6"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
