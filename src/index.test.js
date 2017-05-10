@@ -1,35 +1,34 @@
 /* eslint-env mocha */
+'use strict'
 
-var expect = require('chai').expect
-var starWars = require('./index')
+import { expect } from 'chai'
+import starWars from './index'
 
-describe('starwars-names-for-a-practice', function () {
-  describe('all', function () {
-    it('should be an array of strings', function () {
+describe('starwars-names-for-a-practice', () => {
+  describe('all', () => {
+    it('should be an array of strings', () => {
       expect(starWars.all).to.satisfy(isArrayOfStrings)
 
       function isArrayOfStrings (array) {
-        return array.every(function (item) {
-          return typeof item === 'string'
-        })
+        return array.every((item) => typeof item === 'string')
       }
     })
 
-    it('should contain `Luke Skywalker`', function () {
+    it('should contain `Luke Skywalker`', () => {
       expect(starWars.all).to.include('Luke Skywalker')
     })
   })
 
-  describe('random', function () {
-    it('should return a random item from the starWars.all', function () {
-      var randomItem = starWars.random()
+  describe('random', () => {
+    it('should return a random item from the starWars.all', () => {
+      const randomItem = starWars.random()
       expect(starWars.all).to.include(randomItem)
     })
 
-    it('should return an array of a random items if passed a number', function () {
-      var randomItems = starWars.random(3)
+    it('should return an array of a random item if passed a number', () => {
+      const randomItems = starWars.random(3)
       expect(randomItems).to.have.length(3)
-      randomItems.forEach(function (item) {
+      randomItems.forEach((item) => {
         expect(starWars.all).to.include(item)
       })
     })
